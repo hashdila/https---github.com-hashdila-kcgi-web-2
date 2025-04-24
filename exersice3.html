@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1D Array Practice</title>
+</head>
+<body>
+  <h1>Check Console for Array Practice Output</h1>
+
+  <script>
+    // Create 1D array
+    const numbers = [6, 3, 20, 70, 10, 2];
+
+    //  Print them all
+    console.log("Original array:", numbers);
+
+    //  Sort in ascending order using bubble sort 
+    for (let i = 0; i < numbers.length - 1; i++) {
+      for (let j = 0; j < numbers.length - i - 1; j++) {
+        if (numbers[j] > numbers[j + 1]) {
+          // Swap elements
+          let temp = numbers[j];
+          numbers[j] = numbers[j + 1];
+          numbers[j + 1] = temp;
+        }
+      }
+    }
+
+    // Print the sorted array
+    console.log("Sorted array:", numbers);
+
+    // Print the first element
+    console.log("First element (smallest):", numbers[0]); 
+  </script>
+</body>
+</html>
